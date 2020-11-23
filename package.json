@@ -1,0 +1,41 @@
+{
+  "name": "react-bulma",
+  "version": "0.0.1",
+  "description": "React components using Bulma CSS framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfortson/react-bulma.git"
+  },
+  "keywords": [
+    "react",
+    "bulma"
+  ],
+  "author": "Sam Fortson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfortson/react-bulma/issues"
+  },
+  "homepage": "https://github.com/sfortson/react-bulma#readme",
+  "dependencies": {
+    "bulma": "0.9.1",
+    "react": "17.0.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "flow-bin": "0.138.0",
+    "prettier": "^2.2.0"
+  }
+}
