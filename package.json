@@ -1,10 +1,17 @@
 {
   "name": "react-bulma-io-components",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "React components using Bulma CSS framework",
-  "main": "index.js",
+  "main": "./build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf lib",
+    "test": "jest src --passWithNoTests",
+    "test:watch": "yarn jest src --watch --notify",
+    "cover": "jest src --coverage",
+    "lint": "eslint src",
+    "build": "yarn rollup -c",
+    "precommit": "yarn flow src && yarn lint && yarn test",
+    "prepublishOnly": "yarn clean && yarn lint && yarn test && yarn build"
   },
   "repository": {
     "type": "git",
@@ -22,10 +29,23 @@
   "homepage": "https://github.com/sfortson/react-bulma#readme",
   "dependencies": {
     "bulma": "0.9.1",
-    "react": "17.0.1"
+    "react": "17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.8",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-rewire": "^1.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "eslint": "7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-standard": "^16.0.2",
@@ -36,6 +56,18 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.21.5",
     "flow-bin": "0.138.0",
-    "prettier": "^2.2.0"
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.33.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-cpy": "^2.0.1",
+    "rollup-plugin-flow": "^1.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn precommit"
+    }
   }
 }
