@@ -1,8 +1,10 @@
 [ignore]
+./rollup.config.js
 
 [include]
 
 [libs]
+./src/components/Pagination/pagination.js.flow
 
 [lints]
 

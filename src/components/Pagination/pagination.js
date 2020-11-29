@@ -1,17 +1,16 @@
 // @flow
-import React, { useEffect, useState } from 'react';
-
-import type { Element } from 'react';
+import * as React from 'react';
+import { useEffect, useState } from 'react';
 
 type Props = {
   numPages: number,
   onClick: (page: number) => mixed,
 };
 
-const Pagination = (props: Props): Element<any> => {
-  const { numPages, onClick } = props;
+const Pagination = (props: Props): React.Element<'nav'> => {
   const [page, setPage] = useState(1);
   const [pageList, setPageList] = useState([]);
+  const { numPages, onClick } = props;
 
   useEffect(() => {
     const pages = [];
@@ -53,7 +52,7 @@ const Pagination = (props: Props): Element<any> => {
     );
   };
 
-  const pageButton = (index: number): Element<any> => {
+  const pageButton = (index: number) => {
     const currentPage = 'pagination-link is-current';
     const otherPage = 'pagination-link';
     return (
