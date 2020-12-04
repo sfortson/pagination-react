@@ -1,6 +1,6 @@
 {
   "name": "react-bulma-io-components",
-  "version": "0.0.6",
+  "version": "0.0.13",
   "description": "React components using Bulma CSS framework",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,9 @@
     "test:watch": "jest src --watch --notify",
     "cover": "jest src --coverage",
     "lint": "eslint src",
-    "build": "rollup -c",
+    "build": "yarn build:rollup && yarn build:flow",
+    "build:rollup": "rollup -c",
+    "build:flow": "flow-copy-source -v -i '**/__tests__/**' src dist",
     "precommit": "yarn flow src && yarn lint && yarn test",
     "prepublishOnly": "yarn clean && yarn lint && yarn test && yarn build"
   },
@@ -68,7 +70,8 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-cpy": "^2.0.1",
     "rollup-plugin-flow": "^1.1.1",
-    "rollup-plugin-flow-entry": "^0.3.4"
+    "rollup-plugin-flow-entry": "^0.3.4",
+    "rollup-plugin-includepaths": "^0.2.4"
   },
   "peerDependencies": {
     "bulma": "^0.9.1",
@@ -76,7 +79,8 @@
     "react-dom": "^17.0.1"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "husky": {
     "hooks": {
