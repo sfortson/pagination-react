@@ -2,7 +2,6 @@ import flow from 'rollup-plugin-flow';
 import babel from 'rollup-plugin-babel';
 import copy from 'rollup-plugin-cpy';
 import commonjs from '@rollup/plugin-commonjs';
-import flowEntry from 'rollup-plugin-flow-entry';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 import pkg from './package.json';
@@ -17,7 +16,6 @@ export default {
     strict: false,
   },
   plugins: [
-    flowEntry(),
     nodeResolve(),
     flow(),
     babel({
@@ -36,8 +34,8 @@ export default {
     commonjs(),
     // copy Flow definitions from source to destination directory
     copy({
-      files: ['src'],
-      dest: 'dist/src',
+      files: ['src/*.flow'],
+      dest: 'dist',
     }),
   ],
   external: ['react', 'react-dom', 'bulma'],
