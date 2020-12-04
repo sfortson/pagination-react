@@ -1,6 +1,6 @@
 {
   "name": "react-bulma-io-components",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "React components using Bulma CSS framework",
   "main": "dist/index.js",
   "scripts": {
@@ -68,7 +68,8 @@
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-cpy": "^2.0.1",
     "rollup-plugin-flow": "^1.1.1",
-    "rollup-plugin-flow-entry": "^0.3.4"
+    "rollup-plugin-flow-entry": "^0.3.4",
+    "rollup-plugin-includepaths": "^0.2.4"
   },
   "peerDependencies": {
     "bulma": "^0.9.1",
