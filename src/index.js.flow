@@ -1,8 +1,0 @@
-// @flow
-import type { Element } from 'react';
-
-declare module 'react-bulma-io-components' {
-  declare module.exports: {
-    Pagination(numPages: number, onClick: (page: number) => mixed): Element<'nav'>,
-  };
-}
