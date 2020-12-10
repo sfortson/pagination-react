@@ -1,5 +1,5 @@
 import flow from 'rollup-plugin-flow';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import copy from 'rollup-plugin-cpy';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
