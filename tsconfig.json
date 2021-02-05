@@ -21,7 +21,6 @@
         "jsx": "react-jsx"
     },
     "include": [
-        "rollup.config.js",
         "declaration.d.ts",
         "src/**/*"
     ],
