@@ -21,11 +21,11 @@
         "jsx": "react-jsx"
     },
     "include": [
-        "declaration.d.ts",
         "src/**/*"
     ],
     "exclude": [
         "node_modules",
-        "build"
+        "lib",
+        "types"
     ]
 }

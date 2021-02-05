@@ -1,17 +1,19 @@
 {
   "name": "react-bulma-io-components",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "description": "React components using Bulma CSS framework",
-  "main": "dist/lib/index.js",
-  "types": "dist/types/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "clean": "rimraf lib",
     "test": "jest src --passWithNoTests",
     "test:watch": "jest src --watch --notify",
     "cover": "jest src --coverage",
     "lint": "eslint src",
-    "build": "yarn build:rollup && tsc -d --emitDeclarationOnly --declarationDir dist/types",
+    "build": "yarn build:rollup && yarn build:types",
     "build:rollup": "rollup -c",
+    "build:types": "tsc -d --emitDeclarationOnly --declarationDir lib",
     "prepublishOnly": "yarn clean && yarn lint && yarn test && yarn build"
   },
   "repository": {
@@ -79,8 +81,8 @@
     "react-dom": "^17.0.1"
   },
   "files": [
-    "dist",
-    "src"
+    "lib",
+    "index.d.ts"
   ],
   "husky": {
     "hooks": {
