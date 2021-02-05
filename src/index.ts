@@ -1,2 +1,2 @@
-export { default as Pagination } from './pag_new';
-export type { PaginationProps } from './pag_new';
+export { default as Pagination } from './Pagination';
+export type { PaginationProps } from './Pagination';
