@@ -1,5 +1,5 @@
 import typescript from '@rollup/plugin-typescript';
-import copy from 'rollup-plugin-cpy';
+import copy from 'rollup-plugin-copy';
 
 import pkg from './package.json';
 
@@ -17,6 +17,6 @@ export default {
       sourcemap: true,
     },
   ],
-  plugins: [typescript(), copy([{ files: 'src/**/*', dest: 'lib' }])],
+  plugins: [typescript(), copy({ targets: [{ src: ['src/**/*', '!**/__tests__'], dest: 'lib' }] })],
   external: ['react', 'react/jsx-runtime'],
 };
