@@ -2,6 +2,8 @@
     "extends": "./tsconfig.json",
     "include": [
       "rollup.config.js",
+      "jest.config.js",
+      "babel.config.js",
       "index.d.ts",
       "lib/**/*.ts",
       "src/**/*"
