@@ -79,5 +79,8 @@
     "hooks": {
       "pre-commit": "yarn lint && yarn test"
     }
+  },
+  "peerDependencies": {
+    "bulma": "^0.9.1"
   }
 }
