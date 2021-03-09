@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Subtitle: Default Subtitle 1`] = `
+<div>
+  <p
+    class="subtitle is-5"
+  >
+    Subtitle
+  </p>
+</div>
+`;
+
+exports[`Subtitle: Subtitle size 4 is-spaced 1`] = `
+<div>
+  <p
+    class="subtitle is-4 is-spaced"
+  >
+    Subtitle
+  </p>
+</div>
+`;
+
+exports[`Title: Default 1`] = `
+<div>
+  <p
+    class="title is-5"
+  >
+    Title
+  </p>
+</div>
+`;
+
+exports[`Title: Title size 1 and spaced 1`] = `
+<div>
+  <p
+    class="title is-1 is-spaced"
+  >
+    Title
+  </p>
+</div>
+`;
+
+exports[`Title: Title size 2 1`] = `
+<div>
+  <p
+    class="title is-2"
+  >
+    Title
+  </p>
+</div>
+`;
